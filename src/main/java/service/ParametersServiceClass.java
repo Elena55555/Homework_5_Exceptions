@@ -22,22 +22,16 @@ public class ParametersServiceClass implements ParametersService {
 
 
 
-        if (password.length() > 20 || !password.matches("[a-zA-Z0-9_] {1,20}$")) {
-
-
-
-
-
-            throw new WrongPasswordException("Неверно введен пароль");
-
-        }
-
-
+        if (password.length() > 20 || !password.matches("[a-zA-Z0-9_] {1,20}$"))
+           throw new WrongPasswordException("Неверно введен пароль");
 
         if (!password.equals(confirmPassword)) {
 
-            throw new   WrongPasswordException(" Пароль  не подтвержден");
+            throw   new   WrongPasswordException(" Пароль  не подтвержден");
 
+
+        } else {
+            System.out.println("Игра окончена");
 
         }
 

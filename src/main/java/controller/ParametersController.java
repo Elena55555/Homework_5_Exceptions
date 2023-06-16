@@ -43,12 +43,12 @@ public class ParametersController {
                                          @RequestParam("confirmPassword") String confirmPassword) throws WrongPasswordException, WrongLoginException {
 
 
-        try{
+        try {
 
-            parametersService.validateParameters(login,  password, confirmPassword);
+              parametersService.validateParameters(login, password, confirmPassword);
 
 
-        } catch (WrongLoginException e){
+        } catch (WrongLoginException e) {
 
 
             return "Неверно введен логин";
@@ -67,14 +67,18 @@ public class ParametersController {
 
 
         }
-
-
-        return  " " ;
-
-
+        return  "Игра окончена"  ;
     }
-
 }
+
+
+
+
+
+
+
+
+
 
 //        try {
 //
